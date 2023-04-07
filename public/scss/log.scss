@@ -1,0 +1,85 @@
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $jc-yellow;
+
+  .login-signup {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      width: 350px;
+      height: 35px;
+      margin-bottom: 70px;
+      background-color: $jc-yellow;
+      border: none;
+      border-bottom: 5px solid black;
+    }
+
+    input::placeholder {
+      font-family: lato;
+      font-size: 12pt;
+      color: black;
+    }
+
+    .callout-signup {
+      width: 350px;
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      font-family: lato;
+
+      h3 {
+        font-family: lato-italic;
+        font-size: 12pt;
+      }
+
+      h1 {
+        font-size: 30pt;
+      }
+    }
+
+    .callout {
+      font-family: lato;
+      font-size: 30pt;
+      margin-bottom: 80px;
+    }
+
+    .log-here {
+      letter-spacing: 7px;
+    }
+
+    .log-in {
+      height: 50%;
+    }
+
+    .form-button {
+      width: 250px;
+      height: 50px;
+      background-color: $jc-yellow;
+      font-family: caveat;
+      font-size: 25pt;
+      border: none;
+      border-radius: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 10px 20px;
+    }
+  }
+}

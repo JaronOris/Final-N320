@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Jungle Cook</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <nav>
+        <div class="logo">
+          <img src="../images/logo.svg" alt="" />
+        </div>
+        <div class="links">
+          <a href="../index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="create.html">Create Recipes</a>
+          <a href="userRecipes.html">Your Recipes</a
+          ><a class="log-button displayEle" href="log.html" id="loginButton">
+            Login
+          </a>
+          <button
+            class="log-button hideEle"
+            onclick="signOut()"
+            id="logoutButton"
+          >
+            Logout
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div id="app">
+      <div class="details-container">
+        <div class="card-desc">
+          <div class="name-thumb">
+            <div class="recipe-name">
+              <h3>Supreme Pizza</h3>
+            </div>
+            <div class="recipe-thumbnail">
+              <img src="../images/recipe-pizza.jpg" alt="" />
+            </div>
+          </div>
+          <div class="desc-time-serve">
+            <div class="description">
+              <h2>Description:</h2>
+              <p>
+                Make pizza night super duper out of this world with homemade
+                pizza. This recipe is supreme with vegetables and two types of
+                meat. Yum!
+              </p>
+            </div>
+            <div class="time">
+              <h2>Total Time:</h2>
+              <p>1h 24min</p>
+            </div>
+            <div class="servings">
+              <h2>Servings:</h2>
+              <p>4 Servings</p>
+            </div>
+          </div>
+        </div>
+        <div class="ingredients">
+          <h2>Ingredients:</h2>
+          <ul>
+            <li>1/4 batch pizza dough</li>
+            <li>2 tablespoons Last-Minute Pizza Sauce</li>
+            <li>10 slices pepperoni</li>
+            <li>1 cup cooked and crumbled Italian sausage</li>
+            <li>2 large mushrooms, sliced</li>
+            <li>1/4 bell pepper, sliced</li>
+            <li>1 tablespoon sliced black olives</li>
+            <li>1 cup shredded mozzarella cheese</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h2>Instructions</h2>
+          <ol>
+            <li>
+              Preheat the oven to 475°. Spray pizza pan with nonstick cooking or
+              line a baking sheet with parchment paper.
+            </li>
+            <li>Flatten dough into a thin round and place on the pizza pan.</li>
+            <li>Spread pizza sauce over the dough.</li>
+            <li>Layer the toppings over the dough in the order listed.</li>
+            <li>
+              Bake for 8 to 10 minutes or until the crust is crisp and the
+              cheese melted and lightly brown.
+            </li>
+          </ol>
+        </div>
+        <input id="edit-recipe" type="button" value="Edit Recipe" />
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <div class="copyright">Copyright © 2019 The Jungle Cook</div>
+      <div class="footer-links">
+        <a href="#">Login</a><a href="#">Recipes by Categories</a
+        ><a href="#">Privacy and Copyright</a><a href="#">Create Recipe</a
+        ><a href="#">Your Recipes</a>
+      </div>
+      <div class="socials">
+        <img src="../images/facebook.svg" alt="" />
+        <img src="../images/instagram.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.18.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.18.0/firebase-auth-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.18.0/firebase-database-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.18.0/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.18.0/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.18.0/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.18.0/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.18.0/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.18.0/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.18.0/firebase-performance-compat.js"
+    ></script>
+    <!-- 
+              initialize the SDK after all desired features are loaded, set useEmulator to false
+              to avoid connecting the SDK to running emulators.
+            -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <script src="../lib/jquery-3.6.4.min.js"></script>
+    <script src="../model/model.js"></script>
+    <script src="../app/app.js"></script>
+  </body>
+</html>

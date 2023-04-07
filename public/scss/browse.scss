@@ -1,0 +1,107 @@
+.hero.browsePage {
+  width: 100%;
+  min-height: 140vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(167, 232, 189, 0.75),
+      rgba(167, 232, 189, 0.75)
+    ),
+    url(../images/recipe-hero.jpg);
+
+  .recipe-container {
+    width: 80%;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+    .try-recipes {
+      font-family: caveat-bold;
+      font-size: 40px;
+      margin-bottom: 52px;
+    }
+
+    .recipe-list {
+      width: 100%;
+      min-height: 576px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+
+      .recipe-entry {
+        width: 724px;
+        height: 363px;
+        display: flex;
+
+        .recipe-image {
+          img {
+            width: 350px;
+            height: 363px;
+            object-fit: cover;
+            border-radius: 24px;
+          }
+        }
+
+        .recipe-text {
+          width: 300px;
+          height: 363px;
+          border-radius: 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          text-align: center;
+          font-family: lato-regular;
+          background-color: white;
+
+          .recipe-name {
+            height: 30px;
+            border-bottom: solid 3px black;
+
+            h2 {
+              font-size: 28px;
+            }
+          }
+
+          .instructions {
+            width: 220px;
+            height: 200px;
+            font-size: 18px;
+          }
+
+          .time-serve {
+            width: 120px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+
+            .time {
+              display: flex;
+              justify-content: space-evenly;
+            }
+
+            .servings {
+              display: flex;
+              justify-content: space-evenly;
+            }
+
+            .done-amount {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            svg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

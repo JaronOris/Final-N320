@@ -1,0 +1,155 @@
+.browse-container {
+  width: 100%;
+  min-height: auto;
+  height: 100vh;
+  background-image: linear-gradient($jc-green-background, $jc-green-background),
+    url(../images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .galleryContainer {
+    width: 70%;
+    height: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+
+    .gallery-title {
+      font-family: caveat-bold;
+      font-size: 25pt;
+    }
+
+    .gallery-view {
+      margin-top: 55px;
+      margin-bottom: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .recipe-entry {
+        height: 425px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        .recipe-card {
+          width: 624px;
+          height: 363px;
+          border-radius: 24px;
+          display: flex;
+          margin-bottom: 50px;
+
+          .recipe-img {
+            width: 350px;
+            height: 363px;
+            border-radius: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .recipe-info {
+            width: 324px;
+            height: 363px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-family: lato;
+            background-color: white;
+
+            .recipe-name {
+              width: fit-content;
+              font-size: 16pt;
+              border-bottom: 5px solid black;
+            }
+
+            .recipe-desc {
+              margin-bottom: 16px;
+              width: 190px;
+              height: fit-content;
+              font-size: 11pt;
+            }
+
+            .recipe-details {
+              width: 100px;
+              height: 65px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+
+              .time-serving {
+                width: 100px;
+                font-size: 10pt;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.button-container {
+  width: 325px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 35px;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 26px;
+  font-family: caveat;
+  font-size: 20pt;
+  background-color: #ffd972;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view {
+  display: none;
+}
+
+.recipe-img:hover .view {
+  display: block;
+}
+
+#pizza {
+  background-image: url(../images/recipe-pizza.jpg);
+}
+
+#loginCallout {
+  font-family: caveat-bold;
+  position: absolute;
+  margin: 0 auto;
+  font-size: 50pt !important;
+}
+
+.userListApp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

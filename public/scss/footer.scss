@@ -1,0 +1,29 @@
+.footer-container {
+  width: 95%;
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #393939;
+  font-family: lato-italic;
+  font-size: 15pt;
+
+  .footer-links {
+    a {
+      margin: 0px 10px;
+      text-decoration: none;
+      color: #393939;
+    }
+  }
+
+  .socials {
+    img {
+      width: 19px;
+      height: 19px;
+      margin: 0px 20px;
+    }
+  }
+}

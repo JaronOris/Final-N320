@@ -1,0 +1,16 @@
+{
+  "name": "jungle-cook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "firebase serve": "firebase serve --only hosting",
+    "firebase deploy": "firebase deploy --except functions"
+  },
+  "author": "",
+  "license": "ISC"
+}

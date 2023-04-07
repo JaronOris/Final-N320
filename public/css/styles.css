@@ -1,0 +1,870 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: caveat;
+  src: url(../css/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: caveat-bold;
+  src: url(../css/fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: gillsans;
+  src: url(../css/fonts/GillSans.ttf);
+}
+@font-face {
+  font-family: gillsans-light;
+  src: url(../css/fonts/GillSans-Light.ttf);
+}
+@font-face {
+  font-family: gillsans-italic;
+  src: url(../css/fonts/GillSans\ Italic.ttf);
+}
+@font-face {
+  font-family: lato;
+  src: url(../css/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: lato-bold;
+  src: url(../css/fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: lato-italic;
+  src: url(../css/fonts/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: lato-boldItalic;
+  src: url(../css/fonts/Lato-BoldItalic.ttf);
+}
+@media screen and (max-width: 1600px) {
+  .links {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .links {
+    width: 55% !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .links {
+    width: 60% !important;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .footer-container {
+    font-size: 12pt !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .links {
+    width: 65% !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .links {
+    width: 70% !important;
+  }
+  .footer-links a {
+    font-size: 10pt !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .links {
+    width: 75% !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  a,
+.log-button {
+    font-size: 22pt !important;
+  }
+  .log-button {
+    width: 125px !important;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .gallery-container {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .gallery-view {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+@media screen and (max-width: 950px) {
+  .recipe-entry {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .recipe-entry .recipe-image img {
+    width: 300px !important;
+    height: 150px !important;
+  }
+  .recipe-entry .recipe-text {
+    width: 300px !important;
+    height: fit-content !important;
+  }
+  .recipe-entry .recipe-name {
+    margin-bottom: 20px;
+  }
+  .gallery-view {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .button-container {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .login-signup {
+    flex-direction: column;
+  }
+  .log-in {
+    margin: 100px 0px;
+  }
+  .sign-up {
+    margin-bottom: 100px;
+  }
+  .card-desc {
+    flex-direction: column;
+    position: relative;
+    top: 250px;
+    margin-bottom: 450px;
+  }
+}
+.nav-container {
+  width: 95%;
+  height: 55px;
+  position: absolute;
+  margin: 35px auto;
+  left: 0;
+  right: 0;
+}
+.nav-container nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-container nav .links {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-container nav .links a {
+  width: fit-content;
+  text-decoration: none;
+  color: black;
+  font-family: caveat;
+  font-size: 25pt;
+}
+.nav-container nav .links .log-button {
+  width: 158px;
+  height: 55px;
+  background-color: #ffd972;
+  font-family: caveat;
+  font-size: 25pt;
+  border: none;
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 20px;
+}
+
+.displayEle {
+  display: block !important;
+}
+
+.hideEle {
+  display: none !important;
+  position: relative;
+  top: -100;
+}
+
+#loginButton {
+  text-align: center;
+}
+
+.burger {
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+.burger .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px 0px;
+  border-radius: 20px;
+  display: block;
+  background-color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.footer-container {
+  width: 95%;
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #393939;
+  font-family: lato-italic;
+  font-size: 15pt;
+}
+.footer-container .footer-links a {
+  margin: 0px 10px;
+  text-decoration: none;
+  color: #393939;
+}
+.footer-container .socials img {
+  width: 19px;
+  height: 19px;
+  margin: 0px 20px;
+}
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(242, 92, 84, 0.4588235294), rgba(242, 92, 84, 0.4588235294)), url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-container .bubble-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+.home-container .bubble-container .bubble {
+  border-radius: 200px;
+}
+.home-container .bubble-container .pink {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 150px;
+  right: 75px;
+  background-color: #fcbcb8;
+}
+.home-container .bubble-container .pink p {
+  font-size: 12pt;
+  font-family: lato-italic;
+  text-align: center;
+  width: 105px;
+}
+.home-container .bubble-container .yellow {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: #ffd972;
+}
+.home-container .bubble-container .yellow h1 {
+  font-size: 26pt;
+  font-family: caveat-bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.home-container .bubble-container .yellow p {
+  font-size: 15pt;
+  font-family: caveat;
+  text-align: center;
+  width: 164px;
+}
+
+.hero.browsePage {
+  width: 100%;
+  min-height: 140vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(167, 232, 189, 0.75), rgba(167, 232, 189, 0.75)), url(../images/recipe-hero.jpg);
+}
+.hero.browsePage .recipe-container {
+  width: 80%;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.hero.browsePage .recipe-container .try-recipes {
+  font-family: caveat-bold;
+  font-size: 40px;
+  margin-bottom: 52px;
+}
+.hero.browsePage .recipe-container .recipe-list {
+  width: 100%;
+  min-height: 576px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry {
+  width: 724px;
+  height: 363px;
+  display: flex;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-image img {
+  width: 350px;
+  height: 363px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text {
+  width: 300px;
+  height: 363px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-family: lato-regular;
+  background-color: white;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .recipe-name {
+  height: 30px;
+  border-bottom: solid 3px black;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .recipe-name h2 {
+  font-size: 28px;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .instructions {
+  width: 220px;
+  height: 200px;
+  font-size: 18px;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .time-serve {
+  width: 120px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .time-serve .time {
+  display: flex;
+  justify-content: space-evenly;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .time-serve .servings {
+  display: flex;
+  justify-content: space-evenly;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .time-serve .done-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero.browsePage .recipe-container .recipe-list .recipe-entry .recipe-text .time-serve svg {
+  width: 30px;
+  height: 30px;
+}
+
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd972;
+}
+.login-container .login-signup {
+  width: 75%;
+  height: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.login-container .login-signup form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-container .login-signup input {
+  width: 350px;
+  height: 35px;
+  margin-bottom: 70px;
+  background-color: #ffd972;
+  border: none;
+  border-bottom: 5px solid black;
+}
+.login-container .login-signup input::placeholder {
+  font-family: lato;
+  font-size: 12pt;
+  color: black;
+}
+.login-container .login-signup .callout-signup {
+  width: 350px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-family: lato;
+}
+.login-container .login-signup .callout-signup h3 {
+  font-family: lato-italic;
+  font-size: 12pt;
+}
+.login-container .login-signup .callout-signup h1 {
+  font-size: 30pt;
+}
+.login-container .login-signup .callout {
+  font-family: lato;
+  font-size: 30pt;
+  margin-bottom: 80px;
+}
+.login-container .login-signup .log-here {
+  letter-spacing: 7px;
+}
+.login-container .login-signup .log-in {
+  height: 50%;
+}
+.login-container .login-signup .form-button {
+  width: 250px;
+  height: 50px;
+  background-color: #ffd972;
+  font-family: caveat;
+  font-size: 25pt;
+  border: none;
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 20px;
+}
+
+.createPage {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.createPage .form-container {
+  min-width: 75vw;
+  min-height: 100vh;
+  margin: 200px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.createPage .form-container h2 {
+  width: 100%;
+  margin-bottom: 75px;
+  font-family: caveat-bold;
+  font-size: 38px;
+}
+.createPage .form-container h3 {
+  width: 100%;
+  font-family: lato-black;
+  font-size: 20px;
+}
+.createPage .form-container .recipe-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  margin-bottom: 125px;
+}
+.createPage .form-container .recipe-input .input-button {
+  width: 100%;
+  display: flex;
+}
+.createPage .form-container .recipe-input .input-button .button-container {
+  width: 100px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 3px black;
+  position: relative;
+  top: -3px;
+}
+.createPage .form-container .recipe-input .input-button .button-container button {
+  width: 100px;
+  height: 50px;
+  font-family: caveat;
+  font-size: 20px;
+  background-color: #fcbcb8;
+  border-radius: 30px;
+}
+.createPage .form-container .recipe-input .input-button .button-container .add-to-list {
+  width: 30px;
+  height: 30px;
+  margin-right: -30px;
+  border-radius: 100px;
+  background-color: #fcbcb8;
+}
+.createPage .form-container .recipe-input .input-button .button-container .add-to-list .plus {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.createPage .form-container .recipe-input .input-button .button-container .add-to-list .plus .plus-vert {
+  width: 2px;
+  height: 10px;
+  background-color: white;
+}
+.createPage .form-container .recipe-input .input-button .button-container .add-to-list .plus .plus-hori {
+  position: absolute;
+  min-width: 10px;
+  height: 2px;
+  background-color: white;
+}
+.createPage .form-container .recipe-input input {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  font-family: lato;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 3px black;
+}
+.createPage .form-container #create-recipe {
+  width: 450px;
+  height: 75px;
+  margin: 0 auto;
+  font-family: caveat;
+  font-size: 30px;
+  background-color: #fcbcb8;
+  border-radius: 30px;
+  border: none;
+}
+
+#loginCallout {
+  font-family: caveat-bold;
+  position: absolute;
+  margin: 0 auto;
+  font-size: 50pt !important;
+}
+
+.browse-container {
+  width: 100%;
+  min-height: auto;
+  height: 100vh;
+  background-image: linear-gradient(rgba(167, 232, 189, 0.4588235294), rgba(167, 232, 189, 0.4588235294)), url(../images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.browse-container .galleryContainer {
+  width: 70%;
+  height: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.browse-container .galleryContainer .gallery-title {
+  font-family: caveat-bold;
+  font-size: 25pt;
+}
+.browse-container .galleryContainer .gallery-view {
+  margin-top: 55px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry {
+  height: 425px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card {
+  width: 624px;
+  height: 363px;
+  border-radius: 24px;
+  display: flex;
+  margin-bottom: 50px;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card .recipe-img {
+  width: 350px;
+  height: 363px;
+  border-radius: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card .recipe-info {
+  width: 324px;
+  height: 363px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: lato;
+  background-color: white;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card .recipe-info .recipe-name {
+  width: fit-content;
+  font-size: 16pt;
+  border-bottom: 5px solid black;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card .recipe-info .recipe-desc {
+  margin-bottom: 16px;
+  width: 190px;
+  height: fit-content;
+  font-size: 11pt;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card .recipe-info .recipe-details {
+  width: 100px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card .recipe-info .recipe-details .time-serving {
+  width: 100px;
+  font-size: 10pt;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.browse-container .galleryContainer .gallery-view .recipe-entry .recipe-card .recipe-info .recipe-details .time-serving img {
+  width: 25px;
+  height: 25px;
+}
+
+.button-container {
+  width: 325px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 35px;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 26px;
+  font-family: caveat;
+  font-size: 20pt;
+  background-color: #ffd972;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view {
+  display: none;
+}
+
+.recipe-img:hover .view {
+  display: block;
+}
+
+#pizza {
+  background-image: url(../images/recipe-pizza.jpg);
+}
+
+#loginCallout {
+  font-family: caveat-bold;
+  position: absolute;
+  margin: 0 auto;
+  font-size: 50pt !important;
+}
+
+.userListApp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.details-container {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details-container .card-desc {
+  width: 100%;
+  height: 60vh;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.details-container .card-desc .name-thumb {
+  position: relative;
+}
+.details-container .card-desc .name-thumb .recipe-name {
+  width: 500px;
+  height: fit-content;
+  font-family: lato;
+  font-size: 30px;
+  position: absolute;
+  transform: translateX(-100%) rotate(-90deg);
+  transform-origin: right;
+  top: -20px;
+  left: -20px;
+}
+.details-container .card-desc .name-thumb .recipe-name h3 {
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+.details-container .card-desc .name-thumb .recipe-thumbnail {
+  width: 600px;
+  height: 600px;
+}
+.details-container .card-desc .name-thumb .recipe-thumbnail img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+}
+.details-container .card-desc .desc-time-serve {
+  width: 600px;
+  height: 600px;
+}
+.details-container .card-desc .desc-time-serve h2 {
+  font-family: lato;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+.details-container .card-desc .desc-time-serve p {
+  max-width: 500px;
+  font-family: caveat;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.details-container .ingredients {
+  width: 65vw;
+  text-align: start;
+  margin-top: 100px;
+}
+.details-container .ingredients h2 {
+  font-family: lato;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+.details-container .ingredients ul {
+  list-style: none;
+  font-family: caveat;
+  font-size: 30px;
+}
+.details-container .instructions {
+  width: 65vw;
+  text-align: start;
+  margin: 100px 0px;
+}
+.details-container .instructions h2 {
+  font-family: lato;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+.details-container .instructions ol {
+  font-family: caveat;
+  font-size: 30px;
+}
+.details-container #edit-recipe {
+  width: 450px;
+  height: 75px;
+  margin: 0 auto;
+  font-family: caveat;
+  font-size: 30px;
+  background-color: #ffd972;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 150px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,83 @@
+.nav-container {
+  width: 95%;
+  height: 55px;
+  position: absolute;
+  margin: 35px auto;
+  left: 0;
+  right: 0;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    .links {
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      a {
+        width: fit-content;
+        text-decoration: none;
+        color: black;
+        font-family: caveat;
+        font-size: 25pt;
+      }
+
+      .log-button {
+        width: 158px;
+        height: 55px;
+        background-color: $jc-yellow;
+        font-family: caveat;
+        font-size: 25pt;
+        border: none;
+        border-radius: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 10px 20px;
+      }
+    }
+  }
+}
+
+.displayEle {
+  display: block !important;
+}
+
+.hideEle {
+  display: none !important;
+  position: relative;
+  top: -100;
+}
+
+#loginButton {
+  text-align: center;
+}
+
+.burger{
+  width: 25px;
+  height: 25px;
+  display: none;
+  .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px 0px;
+      border-radius: 20px;
+      display: block;
+      background-color: #000000;
+      transition: all 0.3s ease-in-out;
+  }
+}
+
+.burger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
